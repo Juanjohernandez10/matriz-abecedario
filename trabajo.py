@@ -1,4 +1,4 @@
-matriz = [['-','-','-','-','-','-'],['-','-','-','-','-','-'],['-','-','-','-','-','-'],['-','-','-','-','-','-'],['-','-','-','-','-','-']]
+matriz = [['-','-','-','-','-','-'],['-','-','-','-','-','-'],['-','-','-','-','-','-'],['-','-','-','-','-','-'],['-','-','-','-','-',]]
 
 import os 
 def fnt_agregar (dato, x, y):
@@ -51,7 +51,17 @@ def fnt_agregar (dato, x, y):
     elif dato == 'V' and x == 3 and y == 4:
         matriz[x][y] = dato.upper()
     elif dato == 'W' and x == 3 and y == 5:
-        matriz
+        matriz[x][y]= dato.upper()
+    elif dato == 'x' and x == 4 and y == 0:
+        matriz[x][y] = dato.upper()
+    elif dato == 'y' and x == 4 and y == 1:
+        matriz[x][y] = dato.upper()
+    elif dato == 'Z' and x == 4 and y == 2:
+        matriz[x][y] = dato.upper()
+    elif dato == 'CH' and x == 4 and y == 3:
+        matriz[x][y] = dato.upper()
+    elif dato == 'LL' and x == 4 and y == 4:
+        matriz[x][y] = dato.upper()
     
     
     else :
@@ -78,8 +88,9 @@ sw = True
 while sw== True:
     os.system('cls')
     fnt_impresion_matriz()
+    print('las letras a ingresar por favor en mayuzcula')
     fnt_agregar(input( 'dato: '), int(input('fila: ')), int(input('columna: ')))
-    break
+    
     
     
     
